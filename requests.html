@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yo Baddies | Requests</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<script src="js/main.js" defer></script>
+<link rel="stylesheet" href="css/main.css">
+
+
+</head>
+<body>
+
+<header class="navigation">
+    <div class="nav-container">
+      <div class="brand">
+        <a href="#"><img src="images/logo.png" alt="Yo Baddies" ></a>
+      </div>
+    
+      <div class="search">
+        <input type="text" placeholder="Search" aria-label="Search">
+        <button type="submit" aria-label="Search">
+          <span class="material-icons">search</span>
+        </button>
+      </div>
+
+      <!-- Dropdown menu -->
+      <div class="dropdown">
+        <button class="material-icons dropdown-toggle" id="nav-dropdown" aria-haspopup="true" aria-expanded="false">menu</button>
+        <div class="dropdown-content" aria-labelledby="nav-dropdown">
+          <a href="#">Profile</a>
+          <a href="#">Settings</a>
+          <a href="#">Logout</a>
+        </div>
+      </div>
+    </div>
+</header>
+
+<!-- Requests Section -->
+<section class="requests-section">
+  <div class="requests-container">
+    <header class="requests-header">
+      <h2 class="requests-title">Requests</h2>
+      <a href="addrequests.html" class="link-add-request">
+        <span class="material-icons">add</span>
+        Add New Requests
+      </a>
+    </header>
+    
+    <!-- Requests List -->
+    <div class="request-items-container container-paddinglr">
+      <!-- Repeat this block for each request item -->
+      <div class="request-item">
+        <span class="request-activity">Dance</span>
+        <span class="request-fee">$40</span>
+        <button type="button" class="btn-request-buy">Pay</button>
+      </div>
+
+      <div class="request-item">
+        <span class="request-activity">Sing</span>
+        <span class="request-fee">$50</span>
+        <button type="button" class="btn-request-buy">Pay</button>
+      </div>
+
+      <div class="request-item">
+        <span class="request-activity">Read</span>
+        <span class="request-fee">$70</span>
+        <button type="button" class="btn-request-buy">Pay</button>
+      </div>
+
+      <div class="request-item">
+        <span class="request-activity">Run</span>
+        <span class="request-fee">$120</span>
+        <button type="button" class="btn-request-buy">Pay</button>
+      </div>
+      
+      <!-- More request items here -->
+    </div>
+  </div>
+</section>
+
+<!-- Payment Modal -->
+<div id="paymentModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <form id="paymentForm" class="payment-form">
+      <h2>Complete Your Payment</h2>
+      <div class="form-row">
+        <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+      </div>
+      <div class="form-row">
+        <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+      </div>
+      <div class="form-row">
+        <input type="text" id="address" name="address" placeholder="Address" required>
+      </div>
+      <div class="form-row">
+        <input type="tel" id="cardNumber" name="cardNumber" placeholder="Debit Card Number" pattern="[0-9]{16}" title="16-digit card number without spaces or dashes" required>
+      </div>
+      <div class="form-row">
+        <input type="month" id="expiryDate" name="expiryDate" placeholder="Expiry Date" required min="2020-01">
+      </div>
+      <div class="form-row">
+        <input type="text" id="cardCode" name="cardCode" placeholder="CVC three digit Code" pattern="[0-9]{3}" title="3-digit security code" required>
+      </div>
+      <div class="form-row">
+        <button type="submit" class="btn-pay">Pay $50</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+
+
+<!-- The rest of your website content goes here -->
+<nav class="bottom-nav">
+  <div class="botton-nav-div1">
+    <a href="#" class="nav-item">
+        <span class="material-icons">home</span>
+    </a>
+    <a href="#" class="nav-item">
+        <span class="material-icons">notifications</span>
+    </a>
+    <a href="#" class="nav-item">
+        <span class="material-icons">add_box</span>
+    </a>
+    <a href="#" class="nav-item">
+        <span class="material-icons">chat</span>
+    </a>
+    <a href="#" class="nav-item">
+        <span class="material-icons">person_outline</span>
+    </a>
+  </div>
+</nav>
+
+</body>
+</html>

@@ -1,0 +1,940 @@
+
+body, html {
+  margin: 0;
+  padding: 20px 0;
+  font-family: Arial, sans-serif;
+}
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #dbdbdb;
+  --hover-color: #f1f1f1;
+  --text-color: #000000;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 15px; /* Less space on smaller screens */
+  }
+  /* Or, if adjusting the posts container margin */
+  .posts-container {
+    margin-top: 10px; /* Less space on smaller screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .profile-stats {
+    /*flex-direction: column;*/ /* Stack stats items vertically on smaller screens */
+  }
+
+  .stats-item {
+    /*margin-bottom: 10px;*/ /* Add space between stacked items */
+  }
+}
+
+/* Adjust height for smaller screens */
+@media (max-width: 600px) {
+  .post-thumbnail {
+    height: 100px; /* Smaller height for mobile devices */
+  }
+}
+
+/*follow buttons*/
+@media (max-width: 600px) {
+  .profile-actions {
+    /*flex-direction: column;*/ /* Stack buttons vertically */
+  }
+
+  .btn-subscribe, .btn-make-request, .btn-just-follow {
+   /* width: 100%; */ /* Full-width buttons on small screens */
+  }
+}
+
+
+.navigation {
+  background-color: #ffffff;
+  border-bottom: 1px solid #dbdbdb;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  
+}
+
+/* Dropdown Menu Styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+  font-size: 24px; /* Icon size */
+  background-color: white;
+  border: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:focus-within .dropdown-content {
+  display: block;
+}
+
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  margin-left: auto; /* Centers the div horizontally */
+  margin-right: auto;
+  max-width: 500px;
+}
+
+.brand {
+}
+
+.brand img {
+  height: 30px; /* Adjust as needed */
+  width: auto; /* Maintain aspect ratio */
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search input[type="text"] {
+  height: 18px;
+  padding: 8px;
+  margin-right: -1px; /* Adjust based on your design to align the button snugly */
+  border: 1px solid #dbdbdb;
+  border-right: none; /* Removes the right border to blend with the button */
+  border-radius: 3px 0 0 3px; /* Rounds only the left corners */
+  outline: none;
+  font-size: 13px;
+}
+
+.search button {
+  background-color: white;
+  border: 1px solid #dbdbdb;
+  border-left: none;
+  border-radius: 0 3px 3px 0; /* Rounds only the right corners */
+  cursor: pointer;
+  padding: 5px;
+  outline: none;
+}
+
+.search button .material-icons {
+  font-size: 20px;
+  color: black;
+}
+
+/* Add some top padding to the body so the content is not hidden behind the fixed header */
+body {
+  padding-top: 60px;
+}
+
+
+.bottom-nav {
+  background-color: #ffffff;
+  border-top: 1px solid #dbdbdb;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  justify-content: space-around;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.botton-nav-div1 {
+  max-width: 500px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+}
+
+.bottom-nav .nav-item {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  color: inherit;
+}
+
+.bottom-nav .nav-item .material-icons {
+  font-size: 24px;
+  color: black;
+}
+
+.bottom-nav .nav-item:hover {
+  background-color: ; /* Change as needed */
+}
+
+.bottom-nav .nav-item:active,
+.bottom-nav .nav-item:visited {
+  color: black; /* Or any color you prefer */
+  text-decoration: none;
+}
+.posts-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 10px 10px 10px;
+}
+
+.post {
+  background-color: var(--primary-color);
+  margin-bottom: 20px;
+  border: 1px solid var(--secondary-color);
+  width: 100%;
+  max-width: 500px; /* Adjust based on your layout */
+}
+
+.post-header {
+  padding: 10px 10px 10px 10px;
+}
+.post-footer {
+  font-size: 15px;
+}
+.post-caption {
+  padding: 0px 10px 10px 10px;
+  font-size: 14px;
+  color: #65676b;
+}
+.profile-pic {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.profile-link {
+  text-decoration: none;
+  color: inherit;
+}
+.user-profile-picx {
+
+}
+.profile-link:hover, .profile-link:focus {
+  text-decoration: none;
+}
+.username {
+  font-weight: bold;
+  position: absolute;
+  padding-top: 5px;
+}
+
+.post-image {
+  width: 100%;
+  height: auto;
+}
+
+.post-footer {
+  display: flex;
+  justify-content: start;
+  gap: 10px;
+  padding-bottom: 0px;
+}
+
+.post-action {
+  background-color: var(--primary-color);
+  border: none;
+  color: var(--text-color);
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 0.8em; /* Adjust size as needed */
+}
+
+.post-caption {
+  display: flex;
+}
+
+
+.post-action:hover {
+  background-color: none;
+  color: #65676b;
+}
+
+/*featured people*/
+.featured-people-heading {
+  font-size: 15px;
+  font-weight: bold;
+}
+.featured-people {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Keeps items aligned centrally vertically */
+  justify-content: center; /* Center items horizontally if they don't fill the width */
+  padding-top: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;;
+  width: 100%;
+  max-width: 500px; /* Your set maximum width */
+  margin-left: auto; /* Centers the div horizontally */
+  margin-right: auto; /* Centers the div horizontally */
+}
+
+.featured-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  width: 100%; /* Or a fixed value if you want to limit the width */
+  padding: 0 10px; /* Optional padding for alignment */
+  margin-bottom: 10px;
+}
+
+.featured-container {
+  display: flex;
+  overflow-x: auto; /* Enables horizontal scrolling */
+  margin-top: 10px;
+  padding-bottom: 10px; /* Optional: adjust based on your design */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on WebKit browsers */
+}
+.profile-pic-wrapper {
+  border-radius: 5px; /* Circular wrapper */
+  overflow: hidden; /* Ensures the border-radius affects the image */
+  line-height: 0; /* Removes any extra line-height space around the image */
+  display: flex; /* For centering if necessary */
+  justify-content: center; /* Horizontally centers the image in the wrapper if it's not explicitly set to 100% width */
+  align-items: center; /* Vertically centers the image in the wrapper if it's not explicitly set to 100% height */
+}
+
+.featured-profile {
+  display: flex;
+  flex-direction: column; /* Stack the elements vertically */
+  align-items: center; /* Center-align the child elements */
+  flex: 0 0 auto; /* Don’t grow, don’t shrink, be auto width */
+  margin-right: 10px; /* Space between profiles */
+
+}
+
+.featured-profile-pic-link {
+  display: block;
+  border-radius: 5px; /* Circular images */
+  overflow: hidden; /* Ensures the images are circular */
+  margin-bottom: 4px; /* If you need space below the image */
+}
+
+.featured-profile-pic-link {
+  display: block;
+  width: 60px; /* The width of the image */
+  height: 60px; /* The height of the image */
+  object-fit: cover; /* Ensures the images cover the area */
+}
+
+.featured-username {
+  font-size: 0.8em; /* Adjust as needed */
+  color: var(--text-color); /* Use your predefined text color */
+  margin-bottom: 4px; /* Space between the username and the profile picture */
+  white-space: nowrap; /* Prevents the text from wrapping */
+  overflow: hidden; /* Ensures overflow text is not visible */
+  text-overflow: ellipsis; /* Adds an ellipsis to overflow text */
+  max-width: 90%; /* Adjust based on the size of your .featured-profile div */
+  text-align: center; /* Centers the text, which looks better with ellipsis */
+}
+
+.see-all-link {
+  color: blue; /* Or whatever color indicates interactivity in your design */
+  text-decoration: none; /* Typically links are not underlined in apps */
+}
+
+.see-all-link:hover,
+.see-all-link:focus {
+  text-decoration: underline; /* Optional: underline on hover/focus for interactivity */
+}
+
+/* profile */
+.profile-section {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  background: #fff;
+  border-radius: 8px;
+}
+
+.profile-header {
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.profile-picture-container {
+  margin-bottom: 10px;
+}
+
+.profile-picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.profile-details {
+  margin-bottom: 10px;
+}
+
+.profile-name {
+  margin: 0;
+  color: #000;
+  font-size: 1.5em;
+}
+
+.profile-username {
+  color: #555;
+  font-size: 1em;
+}
+
+.profile-stats {
+  display: flex;
+  justify-content: space-around;
+  text-align: center; /* Center the text for each item */
+  padding: 0;
+  margin: 20px 0;
+}
+
+.stats-item {
+  display: flex;
+  flex-direction: column; /* Stack the number and label vertically */
+  align-items: center; /* Center the items horizontally */
+}
+
+.stats-number {
+  font-size: 1.2em; /* Larger font size for numbers */
+  font-weight: bold; /* Optional: if you want the numbers to stand out */
+}
+
+.stats-label {
+  font-size: 0.8em; /* Smaller font size for labels */
+}
+
+.profile-bio {
+  color: #333;
+  font-size: 0.9em;
+}
+
+.profile-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-gap: 5px;
+  padding-top: 10px;
+}
+
+.profile-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Space between buttons */
+  margin-top: 20px; /* Space below the stats */
+}
+
+.btn-subscribe, .btn-make-request, .btn-just-follow {
+  padding: 10px 20px; /* Size of the buttons */
+  border: none; /* Remove default border */
+  border-radius: 20px; /* Rounded corners */
+  font-weight: bold; /* Bold font */
+  cursor: pointer; /* Cursor to pointer to indicate button */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.btn-subscribe {
+  background-color: #ff3b30; /* Red color for follow button */
+  color: white; /* White text color */
+}
+
+.btn-subscribe:hover {
+  background-color: #ff5e57; /* Slightly lighter red on hover */
+}
+
+.btn-make-request, .btn-just-follow {
+  background-color: white; /* White color for message button */
+  color: black; /* Black text color */
+  border: 1px solid #dbdbdb; /* Light grey border */
+}
+
+.btn-make-request:hover, .btn-just-follow:hover {
+  background-color: #f2f2f2; /* Light grey background on hover */
+}
+
+/*Nav above Profile photos grid*/
+.profile-photo-grid-nav {
+  text-align: center;
+  margin-top: 20px; /* Adjust as needed */
+}
+
+.profile-photo-grid-nav .material-icons {
+  font-size: 1rem; /* You can adjust the size as needed */
+}
+.profile-photo-grid-title {
+  font-weight: 600;
+}
+
+.profile-photo-grid-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.profile-photo-grid-nav-item {
+  margin: 0 10px;
+  display: flex;
+}
+
+.profile-photo-grid-nav-item a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #000;
+  padding: 10px;
+  border-bottom: 3px solid transparent; /* Invisible border for active state */
+}
+
+.profile-photo-grid-nav-item.profile-photo-grid-active a {
+  border-bottom-color: #000; /* Visible border for the active menu item */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .profile-photo-grid-nav-item a {
+    padding: 8px 6px; /* Smaller padding on mobile */
+  }
+
+  .profile-photo-grid-nav-item {
+    margin: 0 5px; /* Smaller margins on mobile */
+  }
+}
+
+/**/
+.post-thumbnail {
+  overflow: hidden;
+  border-radius: 10px;
+  background: #f8f8f8; /* Background color for when images load */
+  position: relative;
+  width: 100%;
+  /* Define a consistent height for all images to ensure uniformity */
+  height: 150px; /* You can adjust this to fit your design */
+}
+
+.post-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width of the container */
+  height: 100%; /* Full height of the container */
+  object-fit: cover; /* Ensures the image covers the area, may be clipped */
+  transition: transform 0.3s ease;
+}
+
+.post-thumbnail:hover .post-img {
+  transform: scale(1.05);
+}
+
+/* requests page */
+/* Requests Page Styles */
+/* Requests Page Styles - Mobile First */
+.requests-section {
+  padding-top: 0px; /* same as header height to avoid overlap */
+  background-color: var(--primary-color);
+  min-height: calc(100vh - 120px); /* Full height minus header and footer */
+  overflow: hidden;
+}
+
+.requests-container, .add-requests-container {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 100px;
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.requests-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  border-bottom: 1px solid #ccc;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.requests-title {
+  font-size: 15px;
+  color: var(--text-color);
+}
+
+.link-add-request {
+  display: inline-flex;
+  padding: 0;
+  background: none; /* You can change the background color as needed */
+  color: #ff3b30;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.link-add-request .material-icons {
+  margin-right: 8px; /* Space between the icon and the text */
+  font-size: 1em; /* Icon size - adjust as needed */
+}
+
+.link-add-request:hover {
+  color: #ff5e57; /* Lighter red on hover */
+}
+
+.request-items-container {
+}
+
+.request-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.request-activity {
+  flex-basis: 50%;
+  text-align: left;
+}
+
+.request-fee {
+  flex-basis: 25%;
+  text-align: center;
+}
+
+.btn-request-buy {
+  flex-basis: 25%;
+  padding: 10px 20px;
+  background-color: #ff3b30; /* Your primary button color */
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-request-buy:hover {
+  background-color: #ff5e57; /* Lighter shade on hover */
+}
+
+/* Responsive Adjustments for larger screens */
+@media (min-width: 600px) {
+  /* Adjustments for larger screens can go here */
+  .request-item, .add-request-item {
+    padding: 15px 10px; /* Slightly smaller padding for larger screens */
+  }
+}
+
+/* Bottom navigation stays the same as provided earlier */
+/* Add Requests page */
+
+/* Apply styles to the container of the form for general layout */
+.add-requests-page-container {
+ 
+}
+
+/* Style the input fields */
+.add-request-input {
+  box-sizing: border-box;
+  border: 1px solid #CCC; /* Change color to match the design */
+  border-radius: 50px;
+  padding: 10px;
+  width: 100%; /* Adjust if inputs should not be full-width */
+  margin-top: 10px;
+  margin-bottom: 10px; /* Add space below each input */
+}
+
+.add-request-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligns items to the start of the flex container */
+  margin-bottom: 0px; /* Adds some space between each request item */
+  padding: 15px 0;
+  border-bottom: 1px solid #ccc;
+
+}
+
+.request-item:last-of-type {
+  border-bottom: none;
+}
+
+.no-border-bottom {
+  border-bottom: none !important;
+}
+
+.add-request-label {
+  font-size: 15px;
+}
+/* Style the select dropdown */
+.add-request-select {
+  border: 1px solid #CCC; /* Change color to match the design */
+  border-radius: 50px;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 100%; /* Adjust if the select should not be full-width */
+  margin-top: 10px;
+  margin-bottom: 15px; /* Add space below the select */
+}
+
+.container-paddinglr {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+/* Style the buttons */
+.add-request-form-action-btn {
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  background-color: #000; /* Change color to match your design */
+  color: #FFF; /* Change color to match your design */
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-sizing: border-box;
+}
+
+.add-requests-form-actions {
+  margin-top: 0px;
+  display: flex;
+  justify-content: flex-end; /* Aligns buttons to the right */
+  align-items: center; /* Centers buttons vertically */
+}
+.add-request-form-action-btn:hover {
+  background-color: #555; /* Darken button on hover */
+}
+
+#add-request-cancel-btn {
+  margin-right: 10px; /* Creates space between buttons */
+  background-color: #FFF; /* Change as needed */
+  color: #000;
+  border: 1px solid #CCC; /* Gives a border to the cancel button */
+}
+
+/* Style hints below inputs */
+.add-request-hint {
+  display: block;
+  margin-bottom: 10px; /* Adjust space between hint and the next element */
+  color: #666; /* Adjust to match design */
+  font-size: 0.8rem;
+}
+
+/* Search results page */
+
+/* General styles for the user results container */
+
+.user-result-card-link {
+  text-decoration: none; /* Removes the underline from the links */
+  color: inherit; /* Inherits the color from parent elements */
+  width: 100%; /* Ensures the link fills the card */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-result-details {
+  text-align: center;
+}
+
+.user-result-name, .user-result-username {
+  display: block; /* This will make each span take its own line */
+  margin-bottom: 5px; /* Spacing between name and username */
+}
+
+/* Styles for each user result card */
+
+.user-results {
+  padding: 0 15px;
+  margin-right: auto;
+  margin-left: auto;
+ }
+
+.user-result-card {
+  width: 49%;
+  border-radius: 15px;
+  padding: 15px 0 15px 0;
+  margin-top: 15px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+.search-result-follow-btn {
+ 
+}
+
+/* Image container with a circle shape and border */
+.user-result-image-container {
+  width: 80px; /* Image container width */
+  height: 80px; /* Image container height */
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+/* User image styling */
+.user-result-image {
+  width: 100%;
+  height: auto;
+}
+
+/* User name styles */
+.user-result-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* User username styles */
+.user-result-username {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Follow button styles */
+.user-result-follow-btn {
+  border: none;
+  background-color: #000000;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Hover state for follow button */
+.user-result-follow-btn:hover {
+  background-color: #333333;
+}
+
+/* Popup */
+/* Payment Modal CSS */
+/* Payment Modal CSS */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1001; /* Make sure it's above other elements */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+  padding-top: 60px;
+}
+
+.modal-content {
+  box-sizing: border-box;
+  background-color: #fefefe;
+  margin: 5% auto; /* 5% from the top and centered */
+  padding: 20px;
+  border-radius: 5px;
+  width: 90%;
+  max-width: 400px; /* Fits most mobile devices */
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-form h2 {
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.payment-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-row {
+}
+
+.payment-form input[type="text"],
+.payment-form input[type="tel"],
+.payment-form input[type="month"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px; /* Space between form fields */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-appearance: none; /* Removes default styles from mobile browsers */
+  appearance: none;
+}
+
+.btn-pay {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-top: 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1em;
+  width: 100%;
+}
+
+.btn-pay:hover {
+  background-color: #45a049;
+}
+
+@media screen and (max-width: 600px) {
+  .modal-content {
+    width: 95%;
+  }
+}

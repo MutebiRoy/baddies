@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yo Baddies Profile</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<script src="js/main.js"></script>
+<link rel="stylesheet" href="css/main.css">
+
+
+</head>
+<body>
+
+<header class="navigation">
+    <div class="nav-container">
+      <div class="brand">
+        <a href="#"><img src="images/logo.png" alt="Yo Baddies" ></a>
+      </div>
+    
+      <div class="search">
+        <input type="text" placeholder="Search" aria-label="Search">
+        <button type="submit" aria-label="Search">
+          <span class="material-icons">search</span>
+        </button>
+      </div>
+
+      <!-- Dropdown menu -->
+      <div class="dropdown">
+        <button class="material-icons dropdown-toggle" id="nav-dropdown" aria-haspopup="true" aria-expanded="false">menu</button>
+        <div class="dropdown-content" aria-labelledby="nav-dropdown">
+          <a href="#">Profile</a>
+          <a href="#">Settings</a>
+          <a href="#">Logout</a>
+        </div>
+      </div>
+    </div>
+</header>
+
+<!-- Profile Section -->
+<section class="profile-section">
+  <header class="profile-header">
+    <div class="profile-picture-container">
+      <img src="images/nakiganda.png" alt="Profile picture of Mutebi" class="profile-picture">
+    </div>
+    <div class="profile-details">
+      <h1 class="profile-name">Mutebi</h1>
+      <span class="profile-username">@almutebi</span>
+    </div>
+    <div class="profile-stats">
+      <div class="stats-item">
+        <span class="stats-number">352</span>
+        <span class="stats-label">Following</span>
+      </div>
+      <div class="stats-item">
+        <span class="stats-number">845</span>
+        <span class="stats-label">Followers</span>
+      </div>
+      <div class="stats-item">
+        <span class="stats-number">17.3K</span>
+        <span class="stats-label">Likes</span>
+      </div>
+    </div>
+
+    <div class="profile-actions">
+      <button type="button" class="btn-subscribe">Subscribe</button>
+      <button type="button" class="btn-just-follow">Follow</button>
+      <button type="button" class="btn-make-request">Make Requests</button>
+    </div>
+
+    <p class="profile-bio">
+      To ❤️ everyone no matter who they are or what they've done
+    </p>
+  </header>
+
+  <nav class="profile-photo-grid-nav">
+    <ul class="profile-photo-grid-nav-list">
+      <li class="profile-photo-grid-nav-item profile-photo-grid-active">
+        <a href="#videos">
+          <span class="profile-photo-grid-title">
+            Posts
+          </span>
+          <span class="item-count">
+            12
+          </span>
+        </a>
+      </li>
+      <li class="profile-photo-grid-nav-item">
+        <a href="#favorites">
+          <span class="material-icons">lock</span>
+          <span class="profile-photo-grid-title">
+            Photos/Videos
+          </span>
+          <span class="item-count">
+            89
+          </span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="profile-posts-grid">
+    <!-- Repeat this block for each post -->
+    <div class="post-thumbnail">
+      <img src="images/1.jpg" alt="Post description" class="post-img">
+      <!-- You can add titles or other elements here for each post if needed -->
+    </div>
+
+    <div class="post-thumbnail">
+      <img src="images/2.jpg" alt="Post description" class="post-img">
+      <!-- You can add titles or other elements here for each post if needed -->
+    </div>
+
+    <div class="post-thumbnail">
+      <img src="images/3.jpg" alt="Post description" class="post-img">
+      <!-- You can add titles or other elements here for each post if needed -->
+    </div>
+
+    <div class="post-thumbnail">
+      <img src="images/4.jpg" alt="Post description" class="post-img">
+      <!-- You can add titles or other elements here for each post if needed -->
+    </div>
+
+    <div class="post-thumbnail">
+      <img src="images/1.jpg" alt="Post description" class="post-img">
+      <!-- You can add titles or other elements here for each post if needed -->
+    </div>
+
+    <div class="post-thumbnail">
+      <img src="images/2.jpg" alt="Post description" class="post-img">
+      <!-- You can add titles or other elements here for each post if needed -->
+    </div>
+
+    <div class="post-thumbnail">
+      <img src="images/3.jpg" alt="Post description" class="post-img">
+      <!-- You can add titles or other elements here for each post if needed -->
+    </div>
+
+    <div class="post-thumbnail">
+      <img src="images/4.jpg" alt="Post description" class="post-img">
+      <!-- You can add titles or other elements here for each post if needed -->
+    </div>
+    
+    <div class="post-thumbnail">
+      <img src="images/1.jpg" alt="Post description" class="post-img">
+      <!-- You can add titles or other elements here for each post if needed -->
+    </div>
+    <div class="post-thumbnail">
+      <img src="images/3.jpg" alt="Post description" class="post-img">
+      <!-- You can add titles or other elements here for each post if needed -->
+    </div>
+    <!-- ... -->
+  </div>
+</section>
+
+
+<!-- The rest of your website content goes here -->
+<nav class="bottom-nav">
+  <div class="botton-nav-div1">
+    <a href="#" class="nav-item">
+        <span class="material-icons">home</span>
+    </a>
+    <a href="#" class="nav-item">
+        <span class="material-icons">notifications</span>
+    </a>
+    <a href="#" class="nav-item">
+        <span class="material-icons">add_box</span>
+    </a>
+    <a href="#" class="nav-item">
+        <span class="material-icons">chat</span>
+    </a>
+    <a href="#" class="nav-item">
+        <span class="material-icons">person_outline</span>
+    </a>
+  </div>
+</nav>
+
+</body>
+</html>

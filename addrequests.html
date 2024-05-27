@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yo Baddies | Add Requests</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<script src="js/main.js"></script>
+<link rel="stylesheet" href="css/main.css">
+
+
+</head>
+<body>
+
+<header class="navigation">
+    <div class="nav-container">
+      <div class="brand">
+        <a href="#"><img src="images/logo.png" alt="Yo Baddies" ></a>
+      </div>
+    
+      <div class="search">
+        <input type="text" placeholder="Search" aria-label="Search">
+        <button type="submit" aria-label="Search">
+          <span class="material-icons">search</span>
+        </button>
+      </div>
+
+      <!-- Dropdown menu -->
+      <div class="dropdown">
+        <button class="material-icons dropdown-toggle" id="nav-dropdown" aria-haspopup="true" aria-expanded="false">menu</button>
+        <div class="dropdown-content" aria-labelledby="nav-dropdown">
+          <a href="#">Profile</a>
+          <a href="#">Settings</a>
+          <a href="#">Logout</a>
+        </div>
+      </div>
+    </div>
+</header>
+
+<!-- Add Requests Section -->
+<section class="add-requests-container">
+  <header class="requests-header">
+    <h2 class="requests-title">Add New Requests</h2>
+  </header>
+  
+  <form id="add-request-form" class="add-request-form container-paddinglr">
+    <div class="add-request-item">
+      <label for="title" class="add-request-label">Title</label>
+      <input type="text" id="title" name="title" class="add-request-input" required>
+      <span class="add-request-hint">i.e. Dancing for you</span>
+    </div>
+
+    <div class="add-request-item">
+      <label for="price" class="add-request-label">Price (US$)</label>
+      <input type="text" id="price" name="price" class="add-request-input" required>
+      <span class="add-request-hint">Amount in US Dollars</span>
+    </div>
+
+    <div class="add-request-item">
+      <label for="duration" class="add-request-label">For how long?</label>
+      <input type="text" id="duration" name="duration" class="add-request-input" required>
+      <span class="add-request-hint">i.e 10 minutes</span>
+    </div>
+
+    <div class="add-request-item no-border-bottom">
+      <label for="type" class="add-request-label">Virtual or Meet</label>
+      <select id="type" name="type" class="add-request-select" required>
+        <option value="">Select an option</option>
+        <option value="Virtual">Virtual</option>
+        <option value="Meet in person">Meet in person</option>
+      </select>
+    </div>
+
+    <div class="add-requests-form-actions">
+      <button type="button" class="add-request-form-action-btn" id="add-request-cancel-btn">Cancel</button>
+      <button type="submit" class="add-request-form-action-btn" id="add-request-save-btn">Save</button>
+    </div>
+  </form>
+  
+</section>
+<!-- The rest of your website content goes here -->
+<nav class="bottom-nav">
+  <div class="botton-nav-div1">
+    <a href="#" class="nav-item">
+        <span class="material-icons">home</span>
+    </a>
+    <a href="#" class="nav-item">
+        <span class="material-icons">notifications</span>
+    </a>
+    <a href="#" class="nav-item">
+        <span class="material-icons">add_box</span>
+    </a>
+    <a href="#" class="nav-item">
+        <span class="material-icons">chat</span>
+    </a>
+    <a href="#" class="nav-item">
+        <span class="material-icons">person_outline</span>
+    </a>
+  </div>
+</nav>
+
+</body>
+</html>
